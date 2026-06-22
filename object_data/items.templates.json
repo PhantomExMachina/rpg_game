@@ -1,0 +1,26 @@
+[
+    {
+        "id": "0000",
+        "name": "Example item",
+        "description": "What does this item do?",
+        "type": "consumable, reusable, key",
+        "max_stack": 99,
+        "value": 50,
+        "usable_in": ["battle", "menu"],
+        "effects": [
+                {
+                    "type": "modify_stat, add_status, remove_status",
+                    "stat": "current_health, max_health, current_mana, max_mana, strength, agility, intelligence, etc",
+                    "value": {
+                        "mode": "flat, formula, percent",
+                        "operation": "add, subtract, multiply",
+                        "amount": 50
+                    }
+                }
+            ],
+        "target": {
+            "type": "single, muliple, all",
+            "valid_targets": ["ally", "self", "enemy"]
+        }
+    }
+]

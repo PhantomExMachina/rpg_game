@@ -1,0 +1,122 @@
+[
+    {
+        "id": "0001",
+        "name": "Tonic",
+        "description": "Heals 50 hp when consumed.",
+        "type": "consumable",
+        "max_stack": 99,
+        "value": 50,
+        "usable_in": ["battle", "menu"],
+        "effects": [
+                {
+                    "type": "modify_stat",
+                    "stat": "current_health",
+                    "operation": "add",
+                    "value": {
+                        "mode": "flat",
+                        "amount": 50
+                    }
+                }
+            ],
+        "target": {
+            "type": "single",
+            "valid_targets": ["ally", "self"]
+        }
+    },
+    {
+        "id": "0002",
+        "name": "Medicine",
+        "description": "Heals 200 hp when consumed.",
+        "type": "consumable",
+        "max_stack": 99,
+        "value": 150,
+        "usable_in": ["battle", "menu"],
+        "effects": [
+                {
+                    "type": "modify_stat",
+                    "stat": "current_health",
+                    "operation": "add",
+                    "value": {
+                        "mode": "flat",
+                        "amount": 200
+                    }
+                }
+            ],
+        "target": {
+            "type": "single",
+            "valid_targets": ["ally", "self"]
+        }
+    },
+    {
+        "id": "0003",
+        "name": "Potion",
+        "description": "Heals 1000 hp when consumed.",
+        "type": "consumable",
+        "max_stack": 99,
+        "value": 750,
+        "usable_in": ["battle", "menu"],
+        "effects": [
+                {
+                    "type": "modify_stat",
+                    "stat": "current_health",
+                    "operation": "add",
+                    "value": {
+                        "mode": "flat",
+                        "amount": 1000
+                    }
+                }
+            ],
+        "target": {
+            "type": "single",
+            "valid_targets": ["ally", "self"]
+        }
+    },
+    {
+        "id": "0004",
+        "name": "Elixir",
+        "description": "Heals 5000 hp when consumed.",
+        "type": "consumable",
+        "max_stack": 99,
+        "value": 2000,
+        "usable_in": ["battle", "menu"],
+        "effects": [
+                {
+                    "type": "modify_stat",
+                    "stat": "current_health",
+                    "operation": "add",
+                    "value": {
+                        "mode": "flat",
+                        "amount": 5000
+                    }
+                }
+            ],
+        "target": {
+            "type": "single",
+            "valid_targets": ["ally", "self"]
+        }
+    },
+    {
+        "id": "0005",
+        "name": "Miracle Drug",
+        "description": "Fully restores health and removes most debuffs.",
+        "type": "consumable",
+        "max_stack": 99,
+        "value": 5000,
+        "usable_in": ["battle", "menu"],
+        "effects": [
+                {
+                    "type": "restore_stat_full",
+                    "stat": "current_health"
+                },
+                {
+                    "type": "remove_statuses",
+                    "statuses": ["poison", "sleep", "silence", "berserk", "confuse", "fear"]
+                }
+
+            ],
+        "target": {
+            "type": "single",
+            "valid_targets": ["ally", "self"]
+        }
+    }
+]
