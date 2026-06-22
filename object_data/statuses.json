@@ -1,0 +1,150 @@
+[
+    {
+        "id": "0001",
+        "name": "poison",
+        "description": "The target loses 5% of their maximum health at the start of each turn.",
+        "type": "status",
+        "duration_type": "until_removed",
+        "effects": [
+            {
+                
+            }
+        ]
+    }
+    {
+        "id": "0005",
+        "name": "stun",
+        "description": "The target is stunned and is unable to take any action for one turn.",
+        "type": "status",
+        "duration_type": "finite",
+        "duration": 1,
+        "effects": [
+            {
+                "type": "no_action"
+            }
+        ]
+    },
+    {
+        "id": "0006",
+        "name": "fear",
+        "description": "Causes the target to become fearful, reducing their effectiveness in battle, but slightly improving their defense posturing",
+        "type": "status",
+        "duration": 3,
+        "effect": [
+            {
+                "type": "modify_stat",
+                "stat": "strength",
+                "operation": "multiply",
+                "value": 0.90
+            },
+            {
+                "type": "modify_stat",
+                "stat": "agility",
+                "operation": "multiply",
+                "value": 0.90
+            },
+            {
+                "type": "modify_stat",
+                "stat": "accuracy",
+                "operation": "multiply",
+                "value": 0.80
+            },
+            {
+                "type": "modify_stat",
+                "stat": "defense",
+                "operation": "multiply",
+                "value": 1.10
+            }
+        ]
+    },
+    {
+        "id": "0007",
+        "name": "terror",
+        "description": "The target is overwhelmed with terror, significantly reducing their effectiveness in battle.",
+        "type": "status",
+        "duration": 3,
+        "effects": [
+            {
+                "type": "modify_stat",
+                "stat": "strength",
+                "operation": "multiply",
+                "value": 0.50
+            },
+            {
+                "type": "modify_stat",
+                "stat": "agility",
+                "operation": "multiply",
+                "value": 0.50
+            },
+            {
+                "type": "modify_stat",
+                "stat": "accuracy",
+                "operation": "multiply",
+                "value": 0.30
+            },
+            {
+                "type": "modify_stat",
+                "stat": "defense",
+                "operation": "multiply",
+                "value": 0.80
+            }
+        ]
+    },
+    {
+        "id": "0008",
+        "name": "panic",
+        "description": "The target is in a state of hysterical panic, drastically reducing their effectiveness in battle, though significantly improving their agility and evasion.",
+        "type": "status",
+        "effects": [
+            {
+                "type": "modify_stat",
+                "stat": "strength",
+                "operation": "multiply",
+                "value": 0.33
+            },
+            {
+                "type": "modify_stat",
+                "stat": "agility",
+                "operation": "multiply",
+                "value": 1.50
+            },
+            {
+                "type": "modify_stat",
+                "stat": "evasion",
+                "operation": "multiply",
+                "value": 1.50
+            },
+            {
+                "type": "modify_stat",
+                "stat": "accuracy",
+                "operation": "multiply",
+                "value": 0.50
+            },
+            {
+                "type": "modify_stat",
+                "stat": "defense",
+                "operation": "multiply",
+                "value": 0.80
+            },
+            {
+                "type": "modify_stat",
+                "stat": "intelligence",
+                "operation": "multiply",
+                "value": 0.50
+            }
+        ]
+    },
+    {
+        "id": "0009",
+        "name": "brave",
+        "description": "The target is filled with bravery, becoming immune to fear effects.",
+        "type": "status",
+        "duration": 5,
+        "effects": [
+            {
+                "type": "immune_statuses",
+                "statuses": ["fear", "terror", "panic"]
+            }
+        ]
+    },
+]
