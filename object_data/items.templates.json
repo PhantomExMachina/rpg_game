@@ -11,9 +11,9 @@
                 {
                     "type": "modify_stat, add_status, remove_status",
                     "stat": "current_health, max_health, current_mana, max_mana, strength, agility, intelligence, etc",
+                    "operation": "[OPTIONAL] | add, subtract, multiply",
                     "value": {
                         "mode": "flat, formula, percent",
-                        "operation": "add, subtract, multiply",
                         "amount": 50
                     }
                 }
