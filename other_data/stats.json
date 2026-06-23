@@ -1,0 +1,27 @@
+[
+    {
+        "id": "001",
+        "name": "strength",
+        "description": "Strength represents physical power. Directly impacts physical damage dealt."
+    },
+    {
+        "id": "002",
+        "name": "stamina",
+        "description": "Stamina represents one's endurance. Directly impacts maximum health."
+    },
+    {
+        "id": "003",
+        "name": "agility",
+        "description": "Agility represents one's speed and dexterity. Directly impacts evasion and accuracy."
+    },
+    {
+        "id": "004",
+        "name": "intelligence",
+        "description": "Intelligence represents one's mental acuity and ability to learn and understand. Directly impacts maximum mana and ability power."
+    },
+    {
+        "id": "005",
+        "name": "willpower",
+        "description": "Willpower represents one's mental fortitude and ability to resist mental effects. Directly impacts resistance to status effects."
+    }
+]

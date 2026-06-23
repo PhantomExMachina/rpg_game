@@ -16,6 +16,48 @@
         ]
     },
     {
+        "id": "0002",
+        "name": "nano-infection",
+        "description": "Nanobots wreak havoc on the target's body, causing them to lose 20% of their maximum health and mana each turn.",
+        "type": "status",
+        "duration_type": "until_removed",
+        "trigger": "start_of_turn",
+        "effects": [
+            {
+                "type": "modify_stat",
+                "stat": "current_health",
+                "operation": "formula",
+                "value": "current_health = current_health - (max_health * 0.20)"
+            },
+            {
+                "type": "modify_stat",
+                "stat": "current_mana",
+                "operation": "formula",
+                "value": "current_mana = current_mana - (max_mana * 0.20)"
+            }
+        ]
+    },
+    {
+        "id": "0003",
+        "name": "mental_numbness",
+        "description": "The target's emotions have been numbed, becoming immune to all emotional effects, but suffering decreased ability damage.",
+        "type": "status",
+        "duration_type": "until_removed",
+        "trigger": "start_of_status",
+        "effects": [
+            {
+                "type": "immune_statuses",
+                "statuses": ["fear", "terror", "panic", "bravery"]
+            },
+            {
+                "type": "modify_stat",
+                "stat": "willpower",
+                "operation": "multiply",
+                "value": 0.75
+            }
+        ]
+    },
+    {
         "id": "0005",
         "name": "stun",
         "description": "The target is stunned and is unable to take any action for one turn.",
@@ -106,7 +148,7 @@
         "type": "status",
         "duration_type": "stat_based",
         "stat": "current_health",
-        "threshold": 0.10,
+        "threshold": 0.20,
         "trigger": "start_of_status",
         "effects": [
             {
@@ -149,7 +191,7 @@
     },
     {
         "id": "0009",
-        "name": "brave",
+        "name": "bravery",
         "description": "The target is filled with bravery, becoming immune to fear effects.",
         "type": "status",
         "duration_type": "turn_count",
