@@ -5,19 +5,24 @@
         "description": "The target loses 5% of their maximum health at the start of each turn.",
         "type": "status",
         "duration_type": "until_removed",
+        "trigger": "start_of_turn",
         "effects": [
             {
-                
+                "type": "modify_stat",
+                "stat": "current_health",
+                "operation": "formula",
+                "value": "current_health = current_health - (max_health * 0.05)"
             }
         ]
-    }
+    },
     {
         "id": "0005",
         "name": "stun",
         "description": "The target is stunned and is unable to take any action for one turn.",
         "type": "status",
-        "duration_type": "finite",
-        "duration": 1,
+        "duration_type": "turn_count",
+        "turn_count": 1,
+        "trigger": "start_of_status",
         "effects": [
             {
                 "type": "no_action"
@@ -29,8 +34,10 @@
         "name": "fear",
         "description": "Causes the target to become fearful, reducing their effectiveness in battle, but slightly improving their defense posturing",
         "type": "status",
-        "duration": 3,
-        "effect": [
+        "duration_type": "turn_count",
+        "turn_count": 3,
+        "trigger": "start_of_status",
+        "effects": [
             {
                 "type": "modify_stat",
                 "stat": "strength",
@@ -62,7 +69,9 @@
         "name": "terror",
         "description": "The target is overwhelmed with terror, significantly reducing their effectiveness in battle.",
         "type": "status",
-        "duration": 3,
+        "duration_type": "turn_count",
+        "turn_count": 3,
+        "trigger": "start_of_status",
         "effects": [
             {
                 "type": "modify_stat",
@@ -95,6 +104,10 @@
         "name": "panic",
         "description": "The target is in a state of hysterical panic, drastically reducing their effectiveness in battle, though significantly improving their agility and evasion.",
         "type": "status",
+        "duration_type": "stat_based",
+        "stat": "current_health",
+        "threshold": 0.10,
+        "trigger": "start_of_status",
         "effects": [
             {
                 "type": "modify_stat",
@@ -139,12 +152,18 @@
         "name": "brave",
         "description": "The target is filled with bravery, becoming immune to fear effects.",
         "type": "status",
-        "duration": 5,
+        "duration_type": "turn_count",
+        "turn_count": 5,
+        "trigger": "start_of_status",
         "effects": [
+            {
+                "type": "remove_statuses",
+                "statuses": ["fear", "terror", "panic"]
+            },
             {
                 "type": "immune_statuses",
                 "statuses": ["fear", "terror", "panic"]
             }
         ]
-    },
+    }
 ]
