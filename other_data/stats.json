@@ -2,26 +2,31 @@
     {
         "id": "001",
         "name": "strength",
-        "description": "Strength represents physical power. Directly impacts physical damage dealt."
+        "description": "Strength represents physical power. Directly impacts physical damage dealt and, to a minor extent, physical defense."
     },
     {
         "id": "002",
-        "name": "stamina",
-        "description": "Stamina represents one's endurance. Directly impacts maximum health."
+        "name": "vitality",
+        "description": "Vitality represents physical endurance and bodily resilience. Directly impacts maximum health and physical defense."
     },
     {
         "id": "003",
         "name": "agility",
-        "description": "Agility represents one's speed and dexterity. Directly impacts evasion and accuracy."
+        "description": "Agility represents speed, reflexes, and dexterity. Directly impacts combat speed, evasion, and physical accuracy."
     },
     {
         "id": "004",
-        "name": "intelligence",
-        "description": "Intelligence represents one's mental acuity and ability to learn and understand. Directly impacts maximum mana and ability power."
+        "name": "synergy",
+        "description": "Synergy represents compatibility and control over internal nanobots. Directly impacts magical damage dealt, magical accuracy, chance of applying status effects, and, to a minor extent, magical defense."
     },
     {
         "id": "005",
-        "name": "willpower",
-        "description": "Willpower represents one's mental fortitude and ability to resist mental effects. Directly impacts resistance to status effects."
+        "name": "resolve",
+        "description": "Resolve represents internal stability under nanobot strain and hostile nanotech interference. Directly impacts maximum MP, magical defense, MP recovery, and status effect resistance."
+    },
+    {
+        "id": "006",
+        "name": "luck",
+        "description": "Luck has a direct, albeit subtle, influence on many game aspects, including critical hit rate, item drop rate, rare encounters, and ambush chance."
     }
 ]
