@@ -1,0 +1,25 @@
+[
+    {
+        "id": "001",
+        "name": "Player 1",
+        "level": 1,
+        "stats": {
+            "max_health": 56,
+            "max_mana": 0,
+            "strength": 7,
+            "vitality": 6,
+            "agility": 9,
+            "synergy": 6,
+            "resolve": 7,
+            "luck": 5
+        },
+        "equipment": {
+            "left hand": "iron dagger",
+            "right hand": null,
+            "head": null,
+            "chest": "cloth tunic",
+            "legs": "cloth pants",
+            "hands": null
+        }
+    }
+]
