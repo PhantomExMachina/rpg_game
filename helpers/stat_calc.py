@@ -50,8 +50,8 @@ class StatCalculator:
     
     def calculate_resistance(self):
         """
-        Resistance is the how likely the enemy status effect will fail to apply. Only applies to primary effect, not secondary/incidental status effects.
-        
+        Resistance represents how likely a target is to prevent a primary status effect from applying.
+
         - Example 1:    Entity casts Eruption, resulting in heavy fire-based damage to the entire team. Has a chance of proccing "burning", based on caster spell_proc_chance (flat percentage chance).
                         The odds of burning being applied is NOT be impacted by resistance (due to it being a secondary / incidental effect).
 
