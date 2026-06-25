@@ -20,8 +20,8 @@ class DamageCalc():
         raise ValueError(f"Unknown damage type: {damage_type}")
     
     def _calculate_physical_damage(self):
-        power = self.context.get(power, 0)
-        multiplier = self.context.get(multiplier, 1.0)
+        power = self.context.get("power", 0)
+        multiplier = self.context.get("multiplier", 1.0)
 
         attack = self.attacker.get_stat("strength")
         defense = self.target.get_stat("defense")
