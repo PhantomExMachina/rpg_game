@@ -58,6 +58,44 @@
         ]
     },
     {
+        "id": "0004",
+        "name": "berserk",
+        "description": "The target has lost all control and will lash out at enemies.",
+        "type": "status",
+        "duration_type": "turn_count",
+        "turn_count": 3,
+        "trigger": "start_of_status",
+        "effects": [
+            {
+                "type": "berserk_action"
+            },
+            {
+                "type": "modify_stat",
+                "stat": "strength",
+                "operation": "multiply",
+                "value": 1.50
+            },
+            {
+                "type": "modify_stat",
+                "stat": "agility",
+                "operation": "multiply",
+                "value": 1.25
+            },
+            {
+                "type": "modify_stat",
+                "stat": "accuracy",
+                "operation": "multiply",
+                "value": 0.75
+            },
+            {
+                "type": "modify_stat",
+                "stat": "defense",
+                "operation": "multiply",
+                "value": 0.75
+            }
+        ]
+    },
+    {
         "id": "0005",
         "name": "stun",
         "description": "The target is stunned and is unable to take any action for one turn.",
@@ -205,6 +243,42 @@
             {
                 "type": "immune_statuses",
                 "statuses": ["fear", "terror", "panic"]
+            }
+        ]
+    },
+    {
+        "id": "0010",
+        "name": "mortally_wounded",
+        "description": "The target is mortally wounded, severely reducing their effectiveness in battle.",
+        "type": "status",
+        "duration_type": "stat_based",
+        "stat": "current_health",
+        "threshold": 0.10,
+        "trigger": "start_of_status",
+        "effects": [
+            {
+                "type": "modify_stat",
+                "stat": "strength",
+                "operation": "multiply",
+                "value": 0.20
+            },
+            {
+                "type": "modify_stat",
+                "stat": "agility",
+                "operation": "multiply",
+                "value": 0.20
+            },
+            {
+                "type": "modify_stat",
+                "stat": "accuracy",
+                "operation": "multiply",
+                "value": 0.10
+            },
+            {
+                "type": "modify_stat",
+                "stat": "defense",
+                "operation": "multiply",
+                "value": 0.50
             }
         ]
     }

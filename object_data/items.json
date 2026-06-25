@@ -74,7 +74,7 @@
     {
         "id": "0004",
         "name": "Nano-Stim",
-        "description": "A syringe containing nano-bots that restores 5000 hp",
+        "description": "A syringe containing medical nano-bots that restores 5000 hp",
         "type": "consumable",
         "max_stack": 99,
         "value": 2000,
@@ -280,8 +280,8 @@
         "usable_in": ["battle", "menu"],
         "effects": [
                 {
-                    "type": "add_status",
-                    "status": "confusion"
+                    "type": "add_statuses",
+                    "statuses": ["confusion", "berserk"]
                 }
             ],
         "target": {
