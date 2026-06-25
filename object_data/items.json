@@ -2,7 +2,7 @@
     {
         "id": "0001",
         "name": "Tonic",
-        "description": "Heals 50 hp when consumed.",
+        "description": "Heals 50 hp when consumed",
         "type": "consumable",
         "max_stack": 99,
         "value": 50,
@@ -20,13 +20,13 @@
             ],
         "target": {
             "type": "single",
-            "valid_targets": ["ally", "self"]
+            "valid_targets": ["ally", "self", "enemy"]
         }
     },
     {
         "id": "0002",
-        "name": "Medicine",
-        "description": "Heals 200 hp when consumed.",
+        "name": "Tincture",
+        "description": "Heals 200 hp when consumed",
         "type": "consumable",
         "max_stack": 99,
         "value": 150,
@@ -44,13 +44,13 @@
             ],
         "target": {
             "type": "single",
-            "valid_targets": ["ally", "self"]
+            "valid_targets": ["ally", "self", "enemy"]
         }
     },
     {
         "id": "0003",
-        "name": "Potion",
-        "description": "Heals 1000 hp when consumed.",
+        "name": "Health Potion",
+        "description": "A powerful concoction of herbs and medicinal plants that restores 1000 hp",
         "type": "consumable",
         "max_stack": 99,
         "value": 750,
@@ -68,13 +68,13 @@
             ],
         "target": {
             "type": "single",
-            "valid_targets": ["ally", "self"]
+            "valid_targets": ["ally", "self", "enemy"]
         }
     },
     {
         "id": "0004",
-        "name": "Elixir",
-        "description": "Heals 5000 hp when consumed.",
+        "name": "Nano-Stim",
+        "description": "A syringe containing nano-bots that restores 5000 hp",
         "type": "consumable",
         "max_stack": 99,
         "value": 2000,
@@ -92,13 +92,13 @@
             ],
         "target": {
             "type": "single",
-            "valid_targets": ["ally", "self"]
+            "valid_targets": ["ally", "self", "enemy"]
         }
     },
     {
         "id": "0005",
         "name": "Miracle Drug",
-        "description": "Fully restores health and removes most debuffs.",
+        "description": "Fully restores health and removes most debuffs",
         "type": "consumable",
         "max_stack": 99,
         "value": 5000,
@@ -112,11 +112,181 @@
                     "type": "remove_statuses",
                     "statuses": ["poison", "sleep", "silence", "berserk", "confuse", "fear"]
                 }
-
             ],
         "target": {
             "type": "single",
-            "valid_targets": ["ally", "self"]
+            "valid_targets": ["ally", "self", "enemy"]
+        }
+    },
+    {
+        "id": "0006",
+        "name": "Philter",
+        "description": "Restores 20 mp",
+        "type": "consumable",
+        "max_stack": 99,
+        "value": 200,
+        "usable_in": ["battle", "menu"],
+        "effects": [
+                {
+                    "type": "modify_stat",
+                    "stat": "current_mana",
+                    "operation": "add",
+                    "value": {
+                        "mode": "flat",
+                        "amount": 20
+                    }
+                }
+            ],
+        "target": {
+            "type": "single",
+            "valid_targets": ["ally", "self", "enemy"]
+        }
+    },
+    {
+        "id": "0007",
+        "name": "Mana Flask",
+        "description": "Restores 50 mp",
+        "type": "consumable",
+        "max_stack": 99,
+        "value": 500,
+        "usable_in": ["battle", "menu"],
+        "effects": [
+                {
+                    "type": "modify_stat",
+                    "stat": "current_mana",
+                    "operation": "add",
+                    "value": {
+                        "mode": "flat",
+                        "amount": 50
+                    }
+                }
+            ],
+        "target": {
+            "type": "single",
+            "valid_targets": ["ally", "self", "enemy"]
+        }
+    },
+    {
+        "id": "0008",
+        "name": "Neuro-agonist",
+        "description": "Cerebral-cortex targeting nanobots that are inhaled through an atomizor to restore 200 mp",
+        "type": "consumable",
+        "max_stack": 99,
+        "value": 1500,
+        "usable_in": ["battle", "menu"],
+        "effects": [
+                {
+                    "type": "modify_stat",
+                    "stat": "current_mana",
+                    "operation": "add",
+                    "value": {
+                        "mode": "flat",
+                        "amount": 200
+                    }
+                }
+            ],
+        "target": {
+            "type": "single",
+            "valid_targets": ["ally", "self", "enemy"]
+        }
+    },
+    {
+        "id": "0009",
+        "name": "Antidote",
+        "description": "A concoction of chemicals that neutralizes poisons and toxins in the bloodstream",
+        "type": "consumable",
+        "max_stack": 99,
+        "value": 100,
+        "usable_in": ["battle", "menu"],
+        "effects": [
+                {
+                    "type": "remove_status",
+                    "status": "poison"
+                }
+            ],
+        "target": {
+            "type": "single",
+            "valid_targets": ["ally", "self", "enemy"]
+        }
+    },
+    {
+        "id": "0010",
+        "name": "Deinhibitor",
+        "description": "A single-use device which releases a counter frequency to remove nano inhibition",
+        "type": "consumable",
+        "max_stack": 99,
+        "value": 100,
+        "usable_in": ["battle", "menu"],
+        "effects": [
+                {
+                    "type": "remove_status",
+                    "status": "inhibition"
+                }
+            ],
+        "target": {
+            "type": "single",
+            "valid_targets": ["ally", "self", "enemy"]
+        }
+    },
+    {
+        "id": "0011",
+        "name": "Nano Purifier",
+        "description": "Nanobots that aggressively target and remove harmful nanobots from the bloodstream",
+        "type": "consumable",
+        "max_stack": 99,
+        "value": 100,
+        "usable_in": ["battle", "menu"],
+        "effects": [
+                {
+                    "type": "remove_status",
+                    "status": "Nano Infection"
+                }
+            ],
+        "target": {
+            "type": "single",
+            "valid_targets": ["ally", "self", "enemy"]
+        }
+    },
+    {
+        "id": "0012",
+        "name": "Anti-fear Serum",
+        "description": "A unique blend of chemical compounds that suppresses the amygdala.",
+        "type": "consumable",
+        "max_stack": 99,
+        "value": 100,
+        "usable_in": ["battle", "menu"],
+        "effects": [
+                {
+                    "type": "remove_statuses",
+                    "statuses": ["fear", "terror", "panic"]
+                },
+                {
+                    "type": "add_status",
+                    "status": "brave"
+                }
+            ],
+        "target": {
+            "type": "single",
+            "valid_targets": ["ally", "self", "enemy"]
+        }
+    },
+    {
+        "id": "0013",
+        "name": "Psychosis Inducer",
+        "description": "An aerosolizing agent that induces a psychotic state by overstimulating the amygdala and suppressing the prefrontal cortex",
+        "type": "consumable",
+        "max_stack": 99,
+        "value": 100,
+        "usable_in": ["battle", "menu"],
+        "effects": [
+                {
+                    "type": "add_status",
+                    "status": "confusion"
+                }
+            ],
+        "target": {
+            "type": "single",
+            "valid_targets": ["ally", "self", "enemy"]
         }
     }
 ]
