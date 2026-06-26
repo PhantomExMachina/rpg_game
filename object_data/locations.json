@@ -1,0 +1,123 @@
+[
+    {
+        "id": "0001",
+        "name": "Clydesdale",
+        "description": {
+            "short": "A small, rural town known for breeding war horses.",
+            "long": [
+            "Clydesdale is a small fuedal town established generations ago.",
+            "The town features a small community of farmers and upholds traditional values and a complete avoidance of technology.",
+            "The town is isolated by a strange forest that causes travelers to become narcoleptic and is often avoided by travelers as such.",
+            "The town is in service of a local lord, who is known to be somewhat cruel and demanding of his subjects."
+            ]
+        },
+        "type": "town",
+        "connections": [
+            {
+                "location_id": "0002",
+                "direction": "north"
+            }
+        ]
+    },
+    {
+        "id": "0002",
+        "name": "Somnolent Forest",
+        "description": {
+            "short": "A large, dense forest that is know for causing travelers to become narcoleptic.",
+            "long": [
+                "The Somnolent Forest was named for it's uncanny ability to cause passerbys to become narcoleptic.",
+                "The effect intensifies the further one travels into the heart of the forest.",
+                "Many travelers prefer to use the outer parameter of the forest to reach Cydesdale."
+            ]
+        },
+        "type": "forest",
+        "connections": [
+            {
+                "location_id": "0001",
+                "direction": "south"
+            },
+            {
+                "location_id": "0003",
+                "direction": "west"
+            },
+            {
+                "location_id": "0009",
+                "direction": "east"
+            }
+        ]
+    },
+    {
+        "id": "0003",
+        "name": "Urwine Fields",
+        "description": {
+            "short": "A sprawling field of farmland on the outskirts of the town of Urwine.",
+            "long": [
+                "The Urwine Fields are a large expanse of farmland that is home to many farmers and their families.",
+                "The fields are known for their fertile soil and abundant crops, which are often sold in the nearby town of Urwine.",
+                "The fields are also home to a variety of wildlife, including deer, rabbits, and foxes."
+            ]
+        },
+        "type": "Field",
+        "connections": [
+            {
+                "location_id": "0002",
+                "direction": "east"
+            },
+            {
+                "location_id": "0004",
+                "direction": "north"
+            },
+            {
+                "location_id": "0006",
+                "direction": "west"
+            },
+            {
+                "location_id": "0007",
+                "direction": "south"
+            }
+        ]
+    },
+    {
+        "id": "0004",
+        "name": "Urwine",
+        "description": {
+            "short": "A large town known for its bustling marketplace and friendly locals.",
+            "long": [
+                "Urwine is a small town that is known for its bustling marketplace and friendly locals.",
+                "The town is home to a variety of shops and vendors, selling everything from fresh produce to handmade crafts.",
+                "The town is also home to a number of inns and taverns, where travelers can rest and enjoy a warm meal."
+            ]
+        },
+        "type": "town",
+        "connections": [
+            {
+                "location_id": "0003",
+                "direction": "south"
+            },
+            {
+                "location_id": "0005",
+                "direction": "north"
+            }
+        ]
+    },
+    {
+        "id": "0005",
+        "name": "Castle Urwine",
+        "description": {
+            "short": "A large, imposing castle that serves as the seat of power for the local lord, Lord Frederick Urwine.",
+            "long": [
+                "Castle Urwine is a large, imposing castle that serves as the seat of power for the local lord, Lord Frederick Urwine.",
+                "The castle is home to a number of guards and servants, who are responsible for maintaining order and ensuring the safety of the lord and his family.",
+                "The castle is also home to a number of lavish rooms and halls, where the lord entertains guests and holds court.",
+                "Rumor has it that Lord Frederick has been secretly trading and experimenting with ancient tech, against the rule of the clergy."
+            ]
+        },
+        "type": "castle",
+        "connections": [
+            {
+                "location_id": "0004",
+                "direction": "south"
+            }
+        ]
+    }
+]

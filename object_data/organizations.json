@@ -1,0 +1,54 @@
+[
+    {
+        "id": "0001",
+        "name": "Clergy Reborn",
+        "description": {
+            "default": "A religious organization that formed after the great war, dedicated to leading a world without technology.",
+            "discoverable": [
+                {
+                    "id": "clergy_0001",
+                    "name": "The Clergy Reborn",
+                    "info": "The Clergy Reborn is the dominating force on the local continent, calling upon kings, lords, vassals, and their subjects at a moment's notice.",
+                    "journal_visible": true,
+                    "unlocked_method": "dialogue"
+                },
+                {
+                    "id" : "clergy_0002",
+                    "name": "Fanatic Technophobes",
+                    "info": "They believe that technology is the root of all evil and that it is their duty to rid the world of it.",
+                    "journal_visible": true,
+                    "unlocked_method": "dialogue"
+                },
+                {
+                    "id" : "clergy_0003",
+                    "name": "A means to and end",
+                    "info": "The Clergy Reborn is known for their strict adherence to their beliefs and their willingness to use violence to achieve their goals.",
+                    "journal_visible": true,
+                    "unlocked_method": "book"
+                },
+                {
+                    "id" : "clergy_0004",
+                    "name": "Hierarchy",
+                    "info": "The Clergy Reborn is led by their Patriarch and Matriarch and a council of high priests and priestesses and are said to be in direct communication with their god.",
+                    "journal_visible": true,
+                    "unlocked_method": "dialogue"
+                },
+                {
+                    "id" : "clergy_0005",
+                    "name": "Hypocrisy",
+                    "info": "Some of the elite leaders of the Clergy Reborn are rumored to be in possession of powerful ancient technology, hiding their hypocrisy from the masses.",
+                    "journal_visible": true,
+                    "unlocked_method": "dialogue"
+                },
+                {
+                    "id" : "clergy_0006",
+                    "name": "The God of the Clergy Reborn",
+                    "info": "Known only to the Patriarch and Matriarch, the god that the council serves is a sentient AI.",
+                    "journal_visible": true,
+                    "unlocked_method": "dialogue"
+                }
+            ]
+
+        }
+    }
+]
