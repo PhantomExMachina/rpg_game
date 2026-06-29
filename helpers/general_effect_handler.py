@@ -1,4 +1,4 @@
-class EffectHandler:
+class GeneralEffectHandler:
     def __init__(self, context, actor):
         self.context = context
         self.actor = actor
